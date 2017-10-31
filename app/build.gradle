@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "library.moyoung.com.swifterlib"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    //로그 관련 라이브러리 추가 (추가할 때 빌드그래들에서 allprojects 안에 jcenter아래에다가 maven { url "https://jitpack.io" } 추가해줘야 함.
+    compile 'com.github.JiongBull:jlog:0.1.0'
+    //테드 퍼미션 추가 (API 23 버전 이상부터 런타임 퍼미션 체크를 해줘야 함 그거 편하게 하기 위한 라이브러리 RxJava 관련은 깃허브가서 확인
+    compile 'gun0912.ted:tedpermission:2.0.0'
+}
+repositories {
+    mavenCentral()
+}
