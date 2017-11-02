@@ -39,6 +39,12 @@ class PrintActivity : AppCompatActivity(){
         webProvision.webViewClient = WebViewClient()
         val webSetting : WebSettings = webProvision.settings
         webProvision.loadUrl(url)
+
+
+//        //기타
+//        webProvision.isHorizontalScrollBarEnabled = false //스크롤바 없애기
+//        webProvision.isVerticalScrollBarEnabled = false
+//        webProvision.setBackgroundColor(0)
     }
 
 }
