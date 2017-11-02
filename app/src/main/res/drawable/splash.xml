@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item android:drawable="@color/colorPrimary"/>
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/jnu_img" />  <!--여기다가 스플래쉬 이미지 띄울거 소스 적어준다.-->
+    </item>
+</layer-list>

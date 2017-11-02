@@ -9,6 +9,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //스플래쉬 이미지 처리
+        setTheme(R.style.AppTheme);
+
+        try {
+            Thread.sleep(2000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
