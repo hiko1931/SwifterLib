@@ -2,7 +2,6 @@ package library.moyoung.com.swifterlib.Log;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
-import android.util.Log;
 
 import com.jiongbull.jlog.Logger;
 import com.jiongbull.jlog.constant.LogLevel;
@@ -28,8 +27,6 @@ public class RootApp_Java extends Application {
         logLevels.add(LogLevel.ERROR);
         logLevels.add(LogLevel.WTF);
 
-        Log.d("테스트","이거부터 호출되야 정상아니냐??");
-
         sLogger = Logger.Builder.newBuilder(getApplicationContext(), "jlog")
                 /* properties below are default value, you can modify them or not. */
                 .setDebug(true)
@@ -46,7 +43,6 @@ public class RootApp_Java extends Application {
     }
 
     public static Logger getLogger() {
-        Log.d("테스트","그다음이거고" + sLogger);
         return sLogger;
     }
 }

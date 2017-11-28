@@ -1,4 +1,4 @@
-package library.moyoung.com.swifterlib.HTMLTrans
+package library.moyoung.com.swifterlib.WebView
 
 import android.os.Bundle
 import android.os.PersistableBundle

@@ -1,4 +1,4 @@
-package library.moyoung.com.swifterlib.HTMLTrans
+package library.moyoung.com.swifterlib.WebView
 
 import android.app.Activity
 import android.content.Intent
@@ -63,7 +63,7 @@ class WebView : Activity(){
         RootApp.getLogger()!!.d("Json 메시지 이벤트를 받음.")
 
         //코틀린에선 이러한 표현이 가능함. apply 는 객체.메소드 이런형식으로 안해도 되도록 해줌. new가 없기때문에 걍 클래스 갖다가 박아도 댐.
-        startActivity(Intent(applicationContext,PrintActivity::class.java).apply {
+        startActivity(Intent(applicationContext,PrintActivity::class.java).apply { //class.java 인 이유 : 결국 JVM위에 돌아가는거라서... 즉 Java로 변환되어져서 컴파일 되기 때문이라고 함.
             putExtra("index", event.toString())
             putExtra("title",title)
         })
